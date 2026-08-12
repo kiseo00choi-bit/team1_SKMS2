@@ -1,0 +1,55 @@
+const chapters=[
+ {label:"PROLOGUE · 첫 만남",day:"PROLOGUE",title:"수상한 선배님",desc:"첫 출근 날, 사원증을 떨어뜨렸다.",bg:"night",lines:[
+  ["내레이션","첫 출근 날.\n딸깍— 사원증이 바닥에 떨어졌다."],["???","이거 떨어뜨렸네."],["주인공","아! 감사합니다♡"],["???","신입인가? 많이 긴장했나 보군."],["주인공","티 나요? ……민망하네요."],["???","괜찮아. 첫날은 누구나 서툴지."],["주인공 속마음","말투는 무뚝뚝한데… 은근 친절하네."],["주인공","저기, 선배님. 성함이 어떻게 되세요?"],["???","……나중에 알려주지."],["주인공 속마음","이름을 왜 나중에 알려줘? 뭔가 비밀스러운 사람 같은데…"],["???","그런데 자네는 회사에 왜 들어왔나?" ]],
+  choices:[{text:"잘하고 싶어서요. 빨리 인정받고 싶어요♡",score:10,reply:"빠르게 가는 것도 좋지만, 어디로 가는지가 더 중요하지."},{text:"구성원들과 함께 행복하게 일하고 싶어서요.",score:25,reply:"구성원의 행복이라… 좋은 답이군. 앞으로가 기대되네."}]},
+ {label:"DAY 1 · 구성원의 지속적 행복",day:"DAY 1",title:"Bar Raising",desc:"더 높은 목표를 향한 첫걸음",bg:"day",badge:"Bar Raising",lines:[
+  ["내레이션","첫 번째 업무가 주어졌다. 예상보다 훨씬 큰 과제였다."],["???","5시간 걸리던 업무를 2시간으로 줄여보게."],["주인공","첫날부터요? 너무 큰 목표 아닌가요?"],["???","큰 목표는 사람을 움직이지. 자네라면 어디서부터 시작하겠나?" ]],
+  choices:[{text:"일단 열심히 시작해볼게요.",score:5,reply:"노력만으로는 부족할 때도 있지. 목표를 다시 정의해보게."},{text:"기존 방식을 분석하고, 더 높은 기준부터 세울게요.",score:25,reply:"좋아. 최고를 향해 한 단계 더 나아가는 것. 그게 Bar Raising이지."}]},
+ {label:"DAY 2 · 새로운 방식",day:"DAY 2",title:"AI Driven",desc:"데이터로 문제의 본질을 보다",bg:"day",badge:"AI Driven",lines:[
+  ["내레이션","업무 도중 반복되는 장애가 발생했다."],["주인공","또 같은 오류예요. 직접 하나씩 고쳐야 할까요?"],["???","시키는 것만 하는 게 아니라 스스로 생각해보는 거지."],["???","문제를 해결하는 데 어떤 도구를 쓸 수 있겠나?" ]],
+  choices:[{text:"제가 밤새 직접 원인을 찾아볼게요.",score:5,reply:"성실함은 좋지만, 혼자 모든 걸 안을 필요는 없네."},{text:"데이터를 확인하고 AI로 패턴부터 분석해볼게요.",score:25,reply:"좋은 생각이군. 기술은 문제의 본질을 더 빨리 보여주지."}]},
+ {label:"DAY 3 · 함께 만드는 성과",day:"DAY 3",title:"One Team",desc:"혼자보다 함께 멀리",bg:"day",badge:"One Team",lines:[
+  ["내레이션","주인공의 업무는 순조로웠지만 다른 부서에서 문제가 생겼다."],["주인공","저쪽 팀의 문제라는데, 담당자에게만 말하면 될까요?"],["???","성과는 부서의 벽 안에서 만들어지는 게 아니지."],["???","자네라면 어떻게 하겠나?" ]],
+  choices:[{text:"해당 부서가 해결하는 게 맞겠죠.",score:5,reply:"경계는 편하지만, 때로 해답도 가두곤 하지."},{text:"같이 해결해볼까요? 함께 일할 사람들을 모을게요.",score:25,reply:"자네, 사람을 움직이는 힘이 있군. 그게 One Team이네."}]},
+ {label:"DAY 4 · 미래를 만드는 질문",day:"DAY 4",title:"Innovation",desc:"오래된 문제를 새롭게 바라보다",bg:"night",badge:"Innovation",lines:[
+  ["내레이션","늦은 저녁, 두 사람은 반도체 관련 자료를 보고 있었다."],["???","반도체는 앞으로 어떻게 발전할까?"],["주인공","더 좋은 반도체를 만들면 되지 않을까요?"],["???","좋다는 건 어떤 뜻이지? 조금 더 구체적으로 생각해보게." ]],
+  choices:[{text:"더 빠르고, 더 작게 만들겠습니다.",score:15,reply:"방향은 좋군. 하지만 아직 남들이 이미 생각한 답이야."},{text:"더 빠르고 작게, 전력은 덜 쓰는 새로운 방법을 찾겠습니다.",score:30,reply:"계속 세계를 넘어야 하는군. 오래 고민한 사람의 답 같아."}]},
+ {label:"DAY 5 · 고객의 마음",day:"DAY 5",title:"Customer Focus",desc:"요청보다 먼저 필요를 보다",bg:"day",badge:"Customer Focus",lines:[
+  ["내레이션","고객 관련 업무. 아직 고객에게 연락이 오지 않았다."],["주인공","기다리면 되는 것 아닌가요?"],["???","자네가 고객이라면 답답하겠지. 무엇을 먼저 할 수 있나?"],["주인공 속마음","이 사람은 정답을 주는 대신 계속 질문을 던진다." ]],
+  choices:[{text:"요청이 오면 바로 대응할게요.",score:5,reply:"시키기 전에 먼저 생각해보는 건 어떻겠나?"},{text:"고객 입장에서 필요한 것을 먼저 찾아 준비할게요.",score:30,reply:"자네가 스스로 생각하게 됐군. 조금… 뿌듯하네."}]},
+ {label:"DAY 6 · 마지막 업무",day:"DAY 6",title:"Perfection",desc:"마지막 작은 오류까지",bg:"night",badge:"Perfection",lines:[
+  ["주인공 속마음","어제부터 계속 신경 쓰인다. 대체 이 선배님은 누구일까?"],["???","이제 이 일도 끝나가는군. 마지막 시험을 해보지."],["주인공","파일은 이 정도면 충분해 보여요."],["???","정말? 작아 보이는 오류 하나가 결과를 바꾸기도 하지." ]],
+  choices:[{text:"한 번 확인했으니 이대로 제출할게요.",score:5,reply:"마지막까지 방심하면 안 되는군."},{text:"마지막까지 한 번 더 꼼꼼히 확인할게요.",score:35,reply:"마지막이라고 생각하니 더 강해지는군. 찾았네, 작은 오류를."}]},
+ {label:"FINAL · 마지막 질문",day:"FINAL",title:"IDENTITY REVEALED",desc:"수상한 선배님의 정체",bg:"night",lines:[
+  ["내레이션","모든 업무가 끝났다. 그가 처음으로 조금 아쉬운 표정을 지었다."],["???","자네와 이야기하는 건 꽤 즐거웠어."],["주인공","저도 즐거웠어요. 그런데… 대체 누구세요?"],["???","처음에는 그냥 좋은 선배인 줄 알았겠지."],["???","나는 자네가 어떤 선택을 하는지 지켜보고 있었네."],["주인공","지금까지 제가 했던 질문들을… 전부 기억하고 계셨군요."],["???","최고를 향해 나아가고, 데이터로 해결하고, 함께 일하고, 미래를 고민하고, 고객을 먼저 보고, 끝까지 확인했지."],["???","이제 내가 누군지 알겠나?"],["내레이션","그가 천천히 사원증을 뒤집었다."],["주인공","잠깐만요. 그럼 지금까지 제가 ‘선배님’이라고 부른 사람이…"],["최태원 회장","하하. 괜찮네. 6일 동안 잘 보았네."],["주인공","회, 회장님?! 정말 죄송합니다!"],["최태원 회장","오히려 좋았어. 직함이 아닌 사람의 모습으로 볼 수 있었으니."],["최태원 회장","그럼 이제 결과를 확인해보지." ]]
+ }
+];
+
+const state={chapter:0,line:0,score:0,badges:[],typing:false,auto:false,sound:true,speed:24,reply:null,choiceDone:false,currentText:"",transitioning:false};
+const $=s=>document.querySelector(s), screens=["#titleScreen","#gameScreen","#endingScreen"];
+const els={title:$("#titleScreen"),game:$("#gameScreen"),ending:$("#endingScreen"),bg:$("#sceneBg"),label:$("#chapterLabel"),score:$("#scoreText"),speaker:$("#speaker"),dialogue:$("#dialogue"),choices:$("#choices"),tap:$("#tapLayer"),mark:$("#nextMark"),card:$("#chapterCard"),toast:$("#toast"),coc:$("#cocRow")};
+let typingTimer,autoTimer,audioCtx;
+function showScreen(id){screens.forEach(x=>$(x).classList.toggle("active",x===id));}
+function chapter(){return chapters[state.chapter]}
+function tone(kind="tap"){if(!state.sound)return;try{audioCtx??=new (window.AudioContext||window.webkitAudioContext)();const o=audioCtx.createOscillator(),g=audioCtx.createGain();o.connect(g);g.connect(audioCtx.destination);o.frequency.value=kind==="good"?660:420;g.gain.setValueAtTime(.035,audioCtx.currentTime);g.gain.exponentialRampToValueAtTime(.001,audioCtx.currentTime+.13);o.start();o.stop(audioCtx.currentTime+.13)}catch{}}
+function save(){localStorage.setItem("skms-route-save",JSON.stringify({chapter:state.chapter,line:state.line,score:state.score,badges:state.badges,sound:state.sound,speed:state.speed,choiceDone:state.choiceDone}));$("#continueBtn").hidden=false}
+function load(){const s=JSON.parse(localStorage.getItem("skms-route-save")||"null");if(!s)return false;Object.assign(state,s,{typing:false,auto:false,reply:null,choiceDone:Boolean(s.choiceDone),transitioning:false});return true}
+function reset(){Object.assign(state,{chapter:0,line:0,score:0,badges:[],typing:false,auto:false,reply:null,choiceDone:false,currentText:"",transitioning:false});clearTimeout(typingTimer);clearTimeout(autoTimer)}
+function startGame(isContinue=false){if(!isContinue)reset();showScreen("#gameScreen");enterChapter(!isContinue)}
+function enterChapter(withCard=true){state.transitioning=false;const c=chapter();els.label.textContent=c.label;els.bg.style.backgroundImage=`url("assets/chairman-${c.bg}.png")`;els.bg.style.filter=c.bg==="night"?"saturate(.9) brightness(.88)":"saturate(.82) brightness(.9)";renderHud();if(withCard){$("#cardDay").textContent=c.day;$("#cardTitle").textContent=c.title;$("#cardDesc").textContent=c.desc;els.card.hidden=false;els.tap.disabled=true;setTimeout(()=>{els.card.hidden=true;els.tap.disabled=false;renderLine()},1500)}else renderLine()}
+function renderHud(){els.score.textContent=state.score;els.coc.innerHTML=Array.from({length:6},(_,i)=>`<i class="coc-dot ${i<state.badges.length?"on":""}"></i>`).join("")}
+function typeText(text){clearTimeout(typingTimer);state.currentText=text;state.typing=true;els.dialogue.textContent="";els.mark.hidden=true;let i=0;const tick=()=>{els.dialogue.textContent=text.slice(0,i++);if(i<=text.length)typingTimer=setTimeout(tick,state.speed);else{state.typing=false;els.mark.hidden=false;if(state.auto)scheduleAuto()}};tick()}
+function renderLine(){const c=chapter();els.choices.innerHTML="";if(state.reply){els.speaker.textContent=state.reply[0];typeText(state.reply[1]);state.reply=null;save();return}if(state.line>=c.lines.length){if(c.choices&&!state.choiceDone)return renderChoices(c.choices);return nextChapter()}const [speaker,text]=c.lines[state.line];els.speaker.textContent=speaker;els.speaker.style.opacity=speaker==="내레이션"?".75":"1";typeText(text);save()}
+function completeTyping(){clearTimeout(typingTimer);els.dialogue.textContent=state.currentText;state.typing=false;els.mark.hidden=false}
+function advance(){if(state.transitioning||els.card.hidden===false||els.choices.children.length)return;if(state.typing){completeTyping();return}tone();state.line++;renderLine()}
+function renderChoices(choices){els.mark.hidden=true;els.tap.disabled=true;els.choices.innerHTML=choices.map((c,i)=>`<button class="choice-btn" data-i="${i}" style="animation-delay:${i*.08}s">${c.text}</button>`).join("");els.choices.querySelectorAll("button").forEach(b=>b.onclick=()=>choose(choices[+b.dataset.i]))}
+function choose(c){tone("good");state.score+=c.score;state.choiceDone=true;renderHud();els.choices.innerHTML="";els.tap.disabled=false;state.reply=["???",c.reply];showToast(`호감도 +${c.score}`);setTimeout(()=>{state.line++;renderLine()},450)}
+function showToast(t){els.toast.textContent=t;els.toast.classList.add("show");setTimeout(()=>els.toast.classList.remove("show"),1400)}
+function nextChapter(){if(state.transitioning)return;state.transitioning=true;const c=chapter();if(c.badge&&!state.badges.includes(c.badge)){state.badges.push(c.badge);renderHud();showToast(`${c.badge} CLEAR ♥`)}if(state.chapter===chapters.length-1){setTimeout(showEnding,700);return}state.chapter++;state.line=0;state.choiceDone=false;save();setTimeout(()=>enterChapter(true),650)}
+function scheduleAuto(){clearTimeout(autoTimer);autoTimer=setTimeout(advance,1100)}
+function showEnding(){state.auto=false;showScreen("#endingScreen");const all=state.badges.length===6;let e;if(all&&state.score>=140)e={icon:"🏆",title:"TRUE ENDING",sub:"깐부 회동",text:"6개의 CoC를 마음에 새긴 당신. 최태원 회장은 다음 주 ‘특별한 회동’에 함께 가자며 손을 내밉니다."};else if(state.score>=70)e={icon:"🌸",title:"NORMAL ENDING",sub:"그렇게 직장인이 되었다",text:"아직 배울 것은 많지만 회사 생활은 이제 시작입니다. 다음에는 더 좋은 선택을 할 수 있을 거예요."};else e={icon:"💔",title:"BAD ENDING",sub:"퇴사 처리 완료",text:"CoC 이해도가 조금 부족했습니다. 하지만 선택을 바꾸면 이야기는 언제든 다시 시작됩니다."};$("#endingIcon").textContent=e.icon;$("#endingTitle").textContent=e.title;$("#endingSubtitle").textContent=e.sub;$("#endingText").textContent=e.text;$("#finalScore").textContent=`${state.score} / 175`;$("#endingBadges").innerHTML=state.badges.map(x=>`<span>♥ ${x}</span>`).join("");save();tone("good")}
+
+$("#startBtn").onclick=()=>startGame(false);$("#continueBtn").onclick=()=>{load();startGame(true)};els.tap.onclick=advance;$("#autoBtn").onclick=()=>{state.auto=!state.auto;$("#autoBtn").classList.toggle("on",state.auto);if(state.auto&&!state.typing)scheduleAuto();else clearTimeout(autoTimer)};$("#skipBtn").onclick=()=>state.typing?completeTyping():advance;
+const menu=$("#menuDialog"),notice=$("#noticeDialog");$("#menuBtn").onclick=()=>menu.showModal();$("#closeMenu").onclick=()=>menu.close();$("#noticeBtn").onclick=()=>notice.showModal();$("#closeNotice").onclick=()=>notice.close();$("#speedRange").oninput=e=>state.speed=Number(e.target.value);$("#soundToggle").onclick=e=>{state.sound=!state.sound;e.currentTarget.querySelector("span").textContent=state.sound?"ON":"OFF"};$("#saveBtn").onclick=()=>{save();menu.close();showToast("저장했습니다")};$("#goTitleBtn").onclick=()=>{menu.close();state.auto=false;showScreen("#titleScreen")};$("#replayBtn").onclick=()=>startGame(false);$("#titleBtn").onclick=()=>showScreen("#titleScreen");
+if(localStorage.getItem("skms-route-save"))$("#continueBtn").hidden=false;
+document.addEventListener("keydown",e=>{if(["Space","Enter"].includes(e.code)&&els.game.classList.contains("active")){e.preventDefault();advance()}});

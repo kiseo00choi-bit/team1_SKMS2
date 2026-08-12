@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+  <meta name="theme-color" content="#351526">
+  <meta name="description" content="선택으로 완성하는 6일간의 오피스 스토리, SKMS ROUTE">
+  <title>SKMS ROUTE — 수상한 선배님과 6일</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Song+Myung&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app" class="app" aria-live="polite">
+    <section id="titleScreen" class="title-screen screen active">
+      <div class="petals" aria-hidden="true"></div>
+      <div class="title-content">
+        <p class="eyebrow">A SIX-DAY OFFICE STORY</p>
+        <h1><span>SKMS</span> ROUTE</h1>
+        <p class="subtitle">수상한 선배님과 6일</p>
+        <div class="title-rule"><i></i><b>♥</b><i></i></div>
+        <p class="intro">당신의 선택이 조직의 행복과<br>두 사람의 엔딩을 바꿉니다.</p>
+        <div class="title-actions">
+          <button id="startBtn" class="primary-btn">새 게임</button>
+          <button id="continueBtn" class="glass-btn" hidden>이어하기</button>
+        </div>
+        <button id="noticeBtn" class="text-btn">작품 안내</button>
+      </div>
+      <p class="fiction-note">본 작품은 팬메이드 픽션이며 실제 인물·단체의 공식 콘텐츠가 아닙니다.</p>
+    </section>
+
+    <section id="gameScreen" class="game-screen screen" aria-label="비주얼 노벨 게임 화면">
+      <div id="sceneBg" class="scene-bg"></div>
+      <div class="scene-shade"></div>
+      <header class="game-header">
+        <div class="chapter-chip"><span>♥</span><strong id="chapterLabel">PROLOGUE</strong></div>
+        <div class="hud">
+          <div class="affection" title="호감도"><span>♥</span><b id="scoreText">0</b></div>
+          <button id="menuBtn" class="icon-btn" aria-label="메뉴 열기">☰</button>
+        </div>
+      </header>
+      <div class="coc-row" id="cocRow" aria-label="완료한 CoC"></div>
+      <div id="chapterCard" class="chapter-card" hidden>
+        <span id="cardDay">DAY 1</span>
+        <h2 id="cardTitle">Bar Raising</h2>
+        <p id="cardDesc">더 높은 목표를 향한 첫걸음</p>
+      </div>
+      <div id="toast" class="toast" role="status"></div>
+      <section id="dialogueBox" class="dialogue-box">
+        <div id="speaker" class="nameplate">???</div>
+        <p id="dialogue" class="dialogue"></p>
+        <span id="nextMark" class="next-mark">♥</span>
+        <div class="dialogue-tools">
+          <button id="autoBtn" aria-label="자동 진행">AUTO</button>
+          <button id="skipBtn" aria-label="대사 빨리 보기">SKIP</button>
+        </div>
+      </section>
+      <div id="choices" class="choices" role="group" aria-label="선택지"></div>
+      <button id="tapLayer" class="tap-layer" aria-label="다음 대사"></button>
+    </section>
+
+    <section id="endingScreen" class="ending-screen screen">
+      <div class="ending-bg"></div>
+      <div class="ending-card">
+        <p class="eyebrow">YOUR STORY IS</p>
+        <div id="endingIcon" class="ending-icon">🏆</div>
+        <h2 id="endingTitle">TRUE ENDING</h2>
+        <h3 id="endingSubtitle">깐부 회동</h3>
+        <p id="endingText"></p>
+        <div class="result-line"><span>최종 호감도</span><b id="finalScore">0</b></div>
+        <div id="endingBadges" class="ending-badges"></div>
+        <div class="ending-actions">
+          <button id="replayBtn" class="primary-btn">다시 시작하기</button>
+          <button id="titleBtn" class="glass-btn">타이틀로</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="menuDialog" class="modal">
+    <div class="modal-head"><h2>게임 메뉴</h2><button id="closeMenu" class="icon-btn" aria-label="닫기">×</button></div>
+    <label>텍스트 속도 <input id="speedRange" type="range" min="8" max="45" value="24"></label>
+    <button id="soundToggle" class="menu-item">효과음 <span>ON</span></button>
+    <button id="saveBtn" class="menu-item">지금 저장</button>
+    <button id="goTitleBtn" class="menu-item danger">타이틀로 돌아가기</button>
+  </dialog>
+
+  <dialog id="noticeDialog" class="modal notice-modal">
+    <div class="modal-head"><h2>작품 안내</h2><button id="closeNotice" class="icon-btn" aria-label="닫기">×</button></div>
+    <p>이 게임은 제공된 스토리를 바탕으로 제작한 비공식 팬메이드 픽션입니다. 실제 인물·기업·사건과 무관한 창작적 연출이 포함되어 있습니다.</p>
+    <p>선택에 따라 호감도가 달라집니다. 6개의 CoC를 모두 경험하고 높은 호감도를 얻어 특별한 엔딩을 열어 보세요.</p>
+  </dialog>
+
+  <script src="game.js"></script>
+</body>
+</html>
